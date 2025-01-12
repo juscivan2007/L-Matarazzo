@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas L' Matarazzo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>L' Matarazzo</h1>
+            <p>Reserve sua mesa e desfrute de uma experiência única!</p>
+        </div>
+    </header>
+    <main class="container">
+        <section class="intro">
+            <h2>Faça sua reserva</h2>
+            <p>Escolha uma mesa disponível, a data, e o horário desejado entre 18:30 e 23:30.</p>
+        </section>
+        <section class="table-grid">
+            <!-- Mesas dinâmicas -->
+            <div class="mesa" onclick="selecionarMesa(1)">Mesa 1</div>
+            <div class="mesa" onclick="selecionarMesa(2)">Mesa 2</div>
+            <div class="mesa" onclick="selecionarMesa(3)">Mesa 3</div>
+            <div class="mesa" onclick="selecionarMesa(4)">Mesa 4</div>
+            <div class="mesa" onclick="selecionarMesa(5)">Mesa 5</div>
+            <div class="mesa" onclick="selecionarMesa(6)">Mesa 6</div>
+            <div class="mesa" onclick="selecionarMesa(7)">Mesa 7</div>
+            <div class="mesa" onclick="selecionarMesa(8)">Mesa 8</div>
+            <div class="mesa" onclick="selecionarMesa(9)">Mesa 9</div>
+            <div class="mesa" onclick="selecionarMesa(10)">Mesa 10</div>
+            <div class="mesa" onclick="selecionarMesa(11)">Mesa 11</div>
+            <div class="mesa" onclick="selecionarMesa(12)">Mesa 12</div>
+            <div class="mesa" onclick="selecionarMesa(13)">Mesa 13</div>
+            <div class="mesa" onclick="selecionarMesa(14)">Mesa 14</div>
+            <div class="mesa" onclick="selecionarMesa(15)">Mesa 15</div>
+        </section>
+        <section class="formulario-container">
+            <form id="formularioReserva">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+
+                <label for="data">Data:</label>
+                <input type="date" id="data" name="data" required>
+
+                <label for="horario">Horário de Início:</label>
+                <select id="horario" name="horario" required>
+                    <option value="">Selecione o horário</option>
+                </select>
+
+                <input type="hidden" id="mesaNumero" name="mesaNumero">
+
+                <button type="submit">Reservar</button>
+            </form>
+        </section>
+    </main>
+    <div id="avisoPopup" class="aviso-popup">
+        <div class="aviso-conteudo">
+            <span id="avisoTexto"></span>
+            <button onclick="fecharAviso()">Fechar</button>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 L' Matarazzo. Todos os direitos reservados.</p>
+        <p>Telefone para contato: <strong>(88) 99953-8569</strong></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
