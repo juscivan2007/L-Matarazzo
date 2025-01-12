@@ -1,6 +1,179 @@
+/* Geral */
+body {
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #E1E1E1; /* Cor de texto mais suave */
+    background-color: #121212; /* Fundo preto */
+}
+
+/* Cabeçalho */
+header {
+    background: #333; /* Fundo escuro */
+    padding: 30px 0;
+    text-align: center;
+    color: #E1E1E1;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* Sombra suave */
+}
+
+header h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    color: #B8B8B8; /* Dourado suave */
+}
+
+header p {
+    margin: 5px 0 0;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #A9A9A9; /* Cor de subtítulo */
+}
+
+/* Container principal */
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 30px;
+    text-align: center;
+    background-color: #1A1A1A;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Seção de introdução */
+.intro {
+    margin-bottom: 40px;
+}
+
+.intro h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #E1E1E1;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    color: #A9A9A9;
+}
+
+/* Grade de mesas */
+.table-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.mesa {
+    background-color: #333;
+    color: #E1E1E1;
+    padding: 25px;
+    border: 2px solid #444;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    font-size: 1.3rem;
+}
+
+.mesa:hover {
+    background-color: #B8B8B8; /* Efeito hover mais sutil */
+    color: #121212;
+    transform: scale(1.05);
+}
+
+.mesa.selecionada {
+    background-color: #E1E1E1; /* Cor dourada suave */
+    color: #121212;
+    border-color: #E1E1E1;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+}
+
+/* Formulário */
+.formulario-container {
+    background-color: #1A1A1A;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #E1E1E1;
+}
+
+form input, form select, form button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #E1E1E1;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+form input:focus, form select:focus, form button:focus {
+    background-color: #444; /* Foco mais suave */
+    outline: none;
+}
+
+form button {
+    background-color: #B8B8B8;
+    color: #121212;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #A9A9A9;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: #A9A9A9;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+/* Pop-up de aviso */
+#avisoPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333;
+    color: #E1E1E1;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    text-align: center;
+}
+
+#avisoPopup button {
+    margin-top: 15px;
+    background-color: #B8B8B8;
+    color: #121212;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#avisoPopup button:hover {
+    background-color: #A9A9A9;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
-    /* Reduzindo o tamanho das fontes para telas menores */
     header h1 {
         font-size: 2.5rem;
     }
@@ -13,9 +186,8 @@
         font-size: 1rem;
     }
 
-    /* Ajustando o layout da grade para dispositivos menores */
     .table-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+        grid-template-columns: repeat(3, 1fr);
         gap: 15px;
     }
 
@@ -24,7 +196,6 @@
         font-size: 1rem;
     }
 
-    /* Ajustando o formulário */
     .formulario-container {
         padding: 20px;
     }
@@ -37,16 +208,14 @@
         padding: 10px;
     }
 
-    /* Rodapé responsivo */
     footer {
         font-size: 0.8rem;
     }
 }
 
 @media (max-width: 480px) {
-    /* Ajuste adicional para telas muito pequenas */
     .table-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+        grid-template-columns: repeat(2, 1fr);
     }
 
     header h1 {
